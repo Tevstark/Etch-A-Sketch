@@ -11,4 +11,17 @@ for(let i = 0; i < 256; i++){
     gridSquare.classList.add('grid-squares');
     gridSquare.setAttribute('id', 'grid-squares');
     container.appendChild(gridSquare);
+    
 };
+
+let hoverEffect = document.querySelectorAll('#grid-squares');
+
+hoverEffect.forEach(function(hoverEffect){
+    hoverEffect.addEventListener('mouseover', function(){
+        this.style.backgroundColor = 'purple';
+    });
+    
+    hoverEffect.addEventListener('mouseout', function(){
+        this.style.backgroundColor = 'blueviolet';
+    });
+})
